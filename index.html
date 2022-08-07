@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://p.kindpng.com/picc/s/79-797601_fork-and-knife-cutlery-circle-interface-symbol-for.png"
+    />
+    <title>Resturant</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <div class="logo" id="logo">
+          <h1>Resturant</h1>
+        </div>
+        <div class="nav-items">
+          <ul class="list-content">
+            <li class="list-items">Home</li>
+            <li class="list-items">About</li>
+            <li class="list-items">Services</li>
+            <li class="list-items">Contact</li>
+          </ul>
+        </div>
+      </nav>
+      <div class="pic-and-qoute-container"></div>
+      <div class="heading-qoute">
+        <h1>CRAFT YOUR OWN MENU</h1>
+      </div>
+    </header>
+    <main>
+      <section class="input-section">
+        <div class="heading-line"><h1>Setup your menu →<h1></div>
+        <form action="submit" id="form">
+          <table>
+            <tr>
+              <td class="label"><label for="foodName">Item Name</label></td>
+              <td>
+                <input
+                  class="input"
+                  type="text"
+                  id="foodName"
+                  placeholder="Pizza"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="itemType">Item Type</label></td>
+              <td>
+                <select id="itemType">
+                  <option value="Fruit and vegetables">
+                    Fruit and vegetables
+                  </option>
+                  <option value="Starchy food">Starchy food</option>
+                  <option value="Dairy">Dairy</option>
+                  <option value="Protein">Protein</option>
+                  <option value="Fat">Fat</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="price">Item Price</label></td>
+              <td>
+                <input
+                  class="input"
+                  type="text"
+                  id="price"
+                  placeholder="19.99 JD"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit" class="btn" id="btn">Submit</button></td>
+            </tr>
+          </table>
+        </form>
+      </section>
+      <section class="output-section">
+        <h1>↓ The Menu ↓</h1>
+        <table id="table">
+          <tr>
+            <th>Item ID</th>
+            <th>Item Name</th>
+            <th>Item Type</th>
+            <th>Item Price</th>
+          </tr>
+          <!-- <tr class="data">
+            <td class="data">1</td>
+            <td class="data">1</td>
+            <td class="data">1</td>
+            <td class="data">1</td>
+          </tr> -->
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>&copy All rights reserved 2022, Yazan Alfarra</p><br>
+      <p>Made with love in Amman</p> <br>
+      <p>♥</p>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
