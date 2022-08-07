@@ -42,7 +42,7 @@
     <main>
       <section class="input-section">
         <div class="heading-line"><h1>Setup your menu →<h1></div>
-        <form action="">
+        <form action="submit" id="form">
           <table>
             <tr>
               <td class="label"><label for="foodName">Item Name</label></td>
@@ -52,13 +52,14 @@
                   type="text"
                   id="foodName"
                   placeholder="Pizza"
+                  required
                 />
               </td>
             </tr>
             <tr>
               <td class="label"><label for="itemType">Item Type</label></td>
               <td>
-                <select id="itemType" name="cars">
+                <select id="itemType">
                   <option value="Fruit and vegetables">
                     Fruit and vegetables
                   </option>
@@ -76,12 +77,13 @@
                   class="input"
                   type="text"
                   id="price"
-                  placeholder="1.99"
+                  placeholder="19.99 JD"
+                  required
                 />
               </td>
             </tr>
             <tr>
-              <td colspan="2"><button class="btn" id="btn">Submit</button></td>
+              <td colspan="2"><button type="submit" class="btn" id="btn">Submit</button></td>
             </tr>
           </table>
         </form>
@@ -95,12 +97,12 @@
             <th>Item Type</th>
             <th>Item Price</th>
           </tr>
-          <tr class="data">
+          <!-- <tr class="data">
             <td class="data">1</td>
             <td class="data">1</td>
             <td class="data">1</td>
             <td class="data">1</td>
-          </tr>
+          </tr> -->
         </table>
       </section>
     </main>
