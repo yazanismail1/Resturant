@@ -56,7 +56,7 @@ Menu.prototype.writeToHTML = function() {
 
     let priceRow = document.createElement("td");
     priceRow.setAttribute("class", "data");
-    priceRow.textContent = `${this.itemPrice}`;
+    priceRow.textContent = `${this.itemPrice} JD`;
     tableRow.appendChild(priceRow);
 
     table.appendChild(tableRow);
