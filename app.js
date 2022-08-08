@@ -22,12 +22,13 @@ function idGenerator() {
 }
 
 // Creating the Constructor //
-
+const menuItems = [];
 function Menu(itemName, itemType, itemPrice){
     this.itemID = function(){return idGenerator()};
     this.itemName = itemName;
     this.itemType = itemType;
     this.itemPrice = itemPrice;
+    menuItems.push(this);
 }
 
 // Prototype to write to in the HTML //
@@ -78,3 +79,4 @@ function handleSubmit(event) {
     newItem.writeToHTML();
     form.reset();
 }
+
