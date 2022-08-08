@@ -50,40 +50,40 @@ function getDataFromLocalStorage(){
         new Menu(parseData[i].itemName, parseData[i].itemType, parseData[i].itemPrice)
     }
 
-    renderData();
+    // renderData();
 }
 
 // Prototype to write to in the HTML //
 
-Menu.prototype.writeToHTML = function() {
-    let table = document.getElementById("table");
+// Menu.prototype.writeToHTML = function() {
+//     let table = document.getElementById("table");
 
-    let tableRow = document.createElement("tr");
-    tableRow.setAttribute("class", "data");
+//     let tableRow = document.createElement("tr");
+//     tableRow.setAttribute("class", "data");
 
-    let idRow = document.createElement("td");
-    idRow.setAttribute("class", "data");
-    idRow.textContent = `${this.itemID()}`;
-    tableRow.appendChild(idRow); 
+//     let idRow = document.createElement("td");
+//     idRow.setAttribute("class", "data");
+//     idRow.textContent = `${this.itemID()}`;
+//     tableRow.appendChild(idRow); 
 
-    let nameRow = document.createElement("td");
-    nameRow.setAttribute("class", "data");
-    nameRow.textContent = `${this.itemName}`;
-    tableRow.appendChild(nameRow); 
+//     let nameRow = document.createElement("td");
+//     nameRow.setAttribute("class", "data");
+//     nameRow.textContent = `${this.itemName}`;
+//     tableRow.appendChild(nameRow); 
 
-    let typeRow = document.createElement("td");
-    typeRow.setAttribute("class", "data");
-    typeRow.textContent = `${this.itemType}`;
-    tableRow.appendChild(typeRow); 
+//     let typeRow = document.createElement("td");
+//     typeRow.setAttribute("class", "data");
+//     typeRow.textContent = `${this.itemType}`;
+//     tableRow.appendChild(typeRow); 
 
-    let priceRow = document.createElement("td");
-    priceRow.setAttribute("class", "data");
-    priceRow.textContent = `${this.itemPrice} JD`;
-    tableRow.appendChild(priceRow);
+//     let priceRow = document.createElement("td");
+//     priceRow.setAttribute("class", "data");
+//     priceRow.textContent = `${this.itemPrice} JD`;
+//     tableRow.appendChild(priceRow);
 
-    table.appendChild(tableRow);
+//     table.appendChild(tableRow);
 
-}
+// }
 
 // Fetching the form elements //
 
@@ -98,17 +98,28 @@ function handleSubmit(event) {
     let itemPrice = event.target.price.value;
 
     let newItem = new Menu(itemName, itemType, itemPrice);
-    newItem.writeToHTML();
+    // newItem.writeToHTML();
     saveToLocalStorage();
+    let audio = new Audio("sound.mp3");
+    audio.play();
     form.reset();
 }
 
+// Play sound when button is clicked //
+
+// let btn = document.getElementById("btn")
+// btn.addEventListener("click", function(){
+    
+//     let audio = new Audio("sound.mp3");
+//     audio.play();
+// })
+
 // Displaying Data on Screen //
 
-function renderData() {
-    for (let i = 0; i < menuItems.length; i++){
-        menuItems[i].writeToHTML();
-    }
-}
+// function renderData() {
+//     for (let i = 0; i < menuItems.length; i++){
+//         menuItems[i].writeToHTML();
+//     }
+// }
 
 getDataFromLocalStorage();

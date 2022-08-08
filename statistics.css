@@ -49,8 +49,10 @@ a {
 .pic-and-qoute-container {
     position: relative;
     height: 100vh;
-    background-image: url(https://www.avanticorporate.com/wp-content/uploads/2022/01/commercial-kitchen-size-blog-header-scaled-e1645764462148.jpeg);
+    background-image: url(https://static.vecteezy.com/system/resources/previews/001/919/194/non_2x/continuous-line-drawing-of-food-symbol-sign-of-plate-knife-and-fork-minimalism-hand-drawn-one-line-art-minimalist-illustration-dinner-theme-with-creative-sketch-contour-vector.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
     background-attachment: fixed;
     filter: grayscale(0%);
     filter: contrast(50%);
@@ -67,7 +69,7 @@ a {
     text-align: center;
     z-index: -1;
     top: 50%;
-    left: 40%;
+    left: 45%;
     display: flex;
     align-items: center;
 }
@@ -105,70 +107,19 @@ a {
     }
 }
 
-
-.input-section h1 {
-    padding: 25px 0;
-    font-size: 22px;
-    font-weight: 600;
-    color: #FFA500;
-    letter-spacing: 3px;
-    z-index: 1;
-}
-
-.input-section label {
-    font-weight: 500;
-    color: #FFA500;
-}
-.input-section td {
-    padding: 10px 0;
-}
-
-.input-section select {
-    width: 100%;
-    height: 30px;
-    border: 1px solid #FFA500;
-    border-radius: 100px;
-    text-align: center;
-}
-
-.label {
-    width: 100px;
-}
-
-.input {
-    width: 300px;
-}
-
-.btn {
-    width: 100%;
-    height: 30px;
-    border-radius: 100px;
-    border: 1px solid #FFA500;
-    background-color: #FFA500;
-    color: black;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-.btn:hover {
-    cursor: pointer;
-}
-
-.input {
-    height: 25px;
-    border: 1px solid #FFA500;
-    border-radius: 100px;
-    text-align: center;
-    
-}
-
 .output-section {
+    background-image: url(https://category-public.canva.com/contextualThumbnails/menu@2x.png);
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-position-y: bottom;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:flex-start;
     padding: 100px 25px 100px 25px;
     align-items: center;
-
+    height: fit-content;
 }
 
 .output-section h1 {
@@ -177,7 +128,6 @@ a {
     font-weight: 600;
     color: #FFA500;
     letter-spacing: 3px;
-    z-index: 1;
 }
 
 #table th {
