@@ -28,16 +28,7 @@ function Menu(itemName, itemType, itemPrice){
     this.itemName = itemName;
     this.itemType = itemType;
     this.itemPrice = itemPrice;
-    menuItems.push(this);
-    
-}
-
-// Adding to Local Storage //
-
-console.log(typeof menuItems)
-function saveToLocalStorage(){
-    let stringifiedData = JSON.stringify(menuItems);
-    localStorage.setItem("menu", stringifiedData);
+    menuItems.push(this);  
 }
 
 // Getting Data from Local Storage //
@@ -46,10 +37,10 @@ function getDataFromLocalStorage(){
     let data = localStorage.getItem("menu");
     let parseData = JSON.parse(data);
 
+    if (parseData !== null){
     for (let i = 0; i < parseData.length; i++) {
         new Menu(parseData[i].itemName, parseData[i].itemType, parseData[i].itemPrice)
-    }
-
+    }}
     renderData();
 }
 
@@ -84,24 +75,6 @@ Menu.prototype.writeToHTML = function() {
     table.appendChild(tableRow);
 
 }
-
-// Fetching the form elements //
-
-// let form = document.getElementById("form");
-// form.addEventListener("submit", handleSubmit);
-
-// function handleSubmit(event) {
-//     event.preventDefault();
-
-//     let itemName = event.target.foodName.value;
-//     let itemType = event.target.itemType.value;
-//     let itemPrice = event.target.price.value;
-
-//     let newItem = new Menu(itemName, itemType, itemPrice);
-//     newItem.writeToHTML();
-//     saveToLocalStorage();
-//     form.reset();
-// }
 
 // Displaying Data on Screen //
 
