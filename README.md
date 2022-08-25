@@ -1,5 +1,7 @@
 # Resturant
 
+Deployed Site: [Craft Your Menu](https://yazanismail1.github.io/Resturant/)
+
 ## Local Storage Submission 
 
 - Adding Statistics Page.
